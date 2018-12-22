@@ -2228,11 +2228,23 @@
 				background-color: #fedea6;
 			}
 
-			.panel > *.color4-alt {
-				background-image: url("../../images/pic04.jpg"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
-				background-size: 528px 600px, auto;
+                        .panel > *.color4-alt {
+                                background-image: url("../../images/pic13.jpg");
+                                background-size: contain;
+                                background-position: center top;
+                                background-repeat: no-repeat;
+                                background-color: black;
+                        }
+
+			.panel > *.color5-alt {
+				background-image: url("../../images/pic04.jpg");
+            			background-size: cover;
 				background-color: #323459;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                height: 100%;
                                 min-width: 20rem;
+                                color: black;
 			}
 
 		.panel > .intro {
