@@ -38,7 +38,7 @@
 									Havrilla</h1>
                                 <p> I am currently a Bioinformatics Scientist in <a href="http://wglab.org">Kai Wang's lab at the Children's Hospital of Philadelphia</a>. I have a PhD in Human Genetics by way of <a href="http://quinlanlab.org">Aaron Quinlan's lab at the University of Utah</a>. My PhD work focused primarily on discovering constraint in human genomes and clinical variant prioritization.  I write tools for phenotypic and genomic data analysis, investigate clinical and population-scale variant data, and assist in the interpretation and standardization of electronic health record data.</p>
 								</div>
-								<div class="image filtered span-1-75" data-position="center" >
+								<div class="image filtered span-1-75" data-position="center">
 									<img src="./images/me02.jpg" alt="" />
 								</div>
 							</section>
@@ -47,7 +47,7 @@
 							<section class="panel color0">
 								<div class="content color2 intro">
 									<h2 class="major">Social Footprint</h2>
-									<p>My professional accounts. I use my Twitter primarily for science, but lately, I've been more open about having autism and thus more active in the disability and autistic communities. GitHub is where most of my work is stored, though much is currently private. My Stack Overflow account shows questions I've answered or posted in the programming community. My Google Scholar profile is simply a place to search for my papers. My LinkedIn is not always up-to-date, but I do use it. Finally, I have created a blog on this website recently, but it is pretty sparse at the moment.</p>
+									My professional accounts. I use my Twitter mainly for science, but lately, I've been more openly autistic and more active in the disability and autistic communities. GitHub is where most of my work is stored, but much of it is private. My Stack Overflow account shows questions I've answered and posted in the programming community. My Google Scholar profile is just a place to search for my papers. My LinkedIn is not always up-to-date, but I do use it. Finally, I have created a blog on this website recently, but it is pretty sparse at the moment.
 								</div>
 								<div class="inner">
                                                                         <ul class="grid-icons three connected">
@@ -170,6 +170,25 @@ print('\n'.join("Fizz"*(i%3==0)+"Buzz"*(i%5==0) or str(i) for i in range(1,101))
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/main.js"></script>
+                        <script>
+                            (function() {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('page-wrapper').scrollLeft -= (delta * 40); // Multiplied by 40
+        e.preventDefault();
+    }
+    if (document.getElementById('page-wrapper').addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        document.getElementById('page-wrapper').addEventListener('mousewheel', scrollHorizontally, false);
+        // Firefox
+        document.getElementById('page-wrapper').addEventListener('DOMMouseScroll', scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        document.getElementById('page-wrapper').attachEvent('onmousewheel', scrollHorizontally);
+    }
+})();
+</script>
 
 	</body>
 </html>
