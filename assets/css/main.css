@@ -2237,13 +2237,15 @@
                         }
 
 			.panel > *.color5-alt {
-				background-image: url("../../images/pic04.jpg");
-            			background-size: cover;
-				background-color: #323459;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                height: 100%;
-                                color: black;
+			        display: grid;
+ 				place-items: center;
+				min-height: 300px;
+			}
+			.panel > *.color5-alt img {
+			    width: 100%;
+			    height: auto; /* Adjust height as needed */
+			    max-width: 100%;
+			    max-height: 100%;
 			}
 
 		.panel > .intro {
