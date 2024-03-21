@@ -853,7 +853,34 @@
 		position: relative;
 		border: 0;
 	}
+	.image.filtered {
+    	display: grid; /* Make the image container a grid */
+    	place-items: center; /* Center the image within the grid */
+	}
 
+	.image.filtered img {
+ 	width: 100%;
+    	height: auto;
+    	max-width: 100%;
+	}
+
+@media screen and (max-width: 767px) {
+    .image.filtered.span-1-75 {
+        display: grid;
+        place-items: center;
+    }
+
+    .image.filtered.span-1-75 img {
+        object-position: 0% 20%; /* Adjust for mobile */
+    }
+}
+
+/* Reset object-position for desktop */
+@media screen and (min-width: 768px) {
+    .image.filtered.span-1-75 img {
+        object-position: 50% 50%; /* Default position */
+    }
+}
 		.image.filtered:after {
 			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 			background-size: 128px 128px, auto;
